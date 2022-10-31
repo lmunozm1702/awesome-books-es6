@@ -9,7 +9,7 @@ const setNavBar = () => {
 
   navClickList.addEventListener('click', () => {
     navList.classList = ('show-section');
-    navClickList.classList = ('active');
+    navClickList.className = ('nav-item active');
     navClickAdd.classList.remove('active');
     navClickContact.classList.remove('active');
     navAdd.classList = ('hide-section');
@@ -19,7 +19,7 @@ const setNavBar = () => {
   navClickAdd.addEventListener('click', () => {
     navList.classList = ('hide-section');
     navAdd.classList = ('show-section');
-    navClickAdd.classList = ('active');
+    navClickAdd.className = ('nav-item active');
     navClickList.classList.remove('active');
     navClickContact.classList.remove('active');
     navContact.classList = ('hide-section');
@@ -29,7 +29,7 @@ const setNavBar = () => {
     navList.classList = ('hide-section');
     navAdd.classList = ('hide-section');
     navContact.classList = ('show-section');
-    navClickContact.classList = ('active');
+    navClickContact.className = ('nav-item active');
     navClickList.classList.remove('active');
     navClickAdd.classList.remove('active');
   });

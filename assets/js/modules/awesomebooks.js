@@ -30,8 +30,8 @@ class AwesomeBooks {
     titleDiv.textContent = `'${Book.title}' by  ${Book.author}`;
     singleBook.appendChild(titleDiv);
 
-    const buttonDiv = document.createElement('button');
-    buttonDiv.textContent = 'Remove';
+    const buttonDiv = document.createElement('i');
+    buttonDiv.className = ('fa-solid fa-trash-can');
     buttonDiv.id = `button_${Book.id}`;
     buttonDiv.onclick = () => {
       this.removeBook(Book.id);

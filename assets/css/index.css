@@ -7,12 +7,17 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+h2 {
+  color: tomato;
+}
+
 .app-container {
-  padding: 30px;
+  padding: 30px 100px;
+  margin: 100px 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  //height: 90vh;
+  overflow: hidden;
 }
 
 #list {
@@ -20,18 +25,22 @@ body {
 }
 
 .books-content {
-  border: 2px solid black;
+  border: 2px solid tomato;
   margin-top: 10px;
+  min-height: 40px;
 }
 
 .single-book {
   display: flex;
   justify-content: space-between;
-  padding: 5px 10px;
+  padding: 6px 10px;
+  color: #645b5b;
 }
 
 .single-book:nth-child(2n + 1) {
-  background-color: gray;
+  background: #9c9898;
+  opacity: 1;
+  color: #fff;
 }
 
 form {
@@ -44,42 +53,89 @@ form {
 }
 
 #add-button {
-  width: fit-content;
   align-self: flex-end;
-  padding: 4px;
+  width: 160px;
+  text-align: center;
+  font-family: Helvetica, sans-serif;
+  border: 1px dashed rgba(255, 255, 255, 0);
+  background-color: tomato;
+  color: #fff;
+  padding: 10px 0 10px 0;
+  transition: all 0.2s;
+  border-radius: 5px;
 }
 
-.navBar {
+#add-button:hover {
+  background: white;
+  color: tomato;
+  border: 2px solid tomato;
+  border-radius: 5px;
+}
+
+.page-header {
   width: 100%;
-  height: 100px;
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+}
+
+.nav-logo {
+  padding-left: 40px;
+  color: #fff;
+  font-size: large;
+  font-weight: bold;
 }
 
 .nav-content {
-  border: 2px solid black;
-  border-radius: 5px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 30px;
+  padding: 0;
+  opacity: 1;
+  background: #fd746c;
+  background: linear-gradient(to left, #fd746c, #ff9068);
 }
 
 .nav-list {
   list-style-type: none;
   display: flex;
-  gap: 20px;
 }
 
-.nav-item .active {
-  color: blue;
+.nav-item {
+  display: inline-block;
+  list-style: none;
+  width: 160px;
+  text-align: center;
+  font-family: Helvetica, sans-serif;
+  border: 1px dashed rgba(255, 255, 255, 0);
+  color: #fff;
+  padding: 20px 0 10px 0;
+  margin: 0;
+  cursor: pointer;
+  transition: all 0.2s;
 }
 
 .nav-item > a {
   text-decoration: none;
-  color: black;
+  color: #fff;
 }
 
-.nav-item:hover > a {
-  color: blue;
+.active {
+  background-color: #fff;
+  border-bottom: 3px ridge tomato;
+  font-weight: bold;
+}
+
+.active > a {
+  color: tomato !important;
+}
+
+.nav-item:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.active:hover {
+  background: white;
 }
 
 #contact-div {
@@ -92,11 +148,12 @@ form {
 }
 
 .copyright {
-  border: 2px solid black;
-  border-radius: 5px;
   text-align: start;
-  padding: 10px 20px;
+  padding: 40px 0;
   margin-top: 20px;
+  background-color: #645b5b;
+  color: #fff;
+  text-align: center;
 }
 
 .show-section {
@@ -110,4 +167,37 @@ form {
 #date_time {
   text-align: end;
   margin-top: 5px;
+  font-size: small;
+  font-weight: lighter;
+  color: tomato;
+  margin-right: 5px;
+}
+
+input[type='text'] {
+  border: 2px solid tomato;
+  border-radius: 5px;
+  padding: 10px;
+  color: #645b5b;
+  font-weight: bold;
+}
+
+.page-footer {
+  width: 100%;
+  height: 110px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  margin-top: 50px;
+}
+
+.contact-list {
+  list-style: none;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-list i {
+  color: tomato;
 }
