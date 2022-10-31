@@ -6,13 +6,71 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="assets/css/index.css">
+  <script src="https://kit.fontawesome.com/8496e48197.js" crossorigin="anonymous"></script>
   <title>Awesome Books - ES6</title>
 </head>
 
 <body>
+  <header class="page-header">
+    <div class="navBar">
+      <div class="nav-content">
+        <div class="nav-logo">Awasome Books</div>
+        <nav>
+          <ul class="nav-list">
+            <li id="list-link" class="nav-item active"><a href="#list">List</a></li>
+            <li id="add-link" class="nav-item"><a href="#add">Add new</a></li>
+            <li id="contact-link" class="nav-item"><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div id="date_time"></div>
+    </div>
+
+  </header>
+
+  <main class="app-container">
+    <section>
+      <div id="list" class="show-section">
+        <h2>All Awesome Books</h2>
+        <div class="books-content"></div>
+      </div>
+    </section>
+
+    <section id="add" class="hide-section">
+      <form id="addBookForm" action="#">
+        <h2>Add a new book</h2>
+        <input type="text" id="title" placeholder="Title" required>
+        <input type="text" id="author" placeholder="Author" required>
+        <input type="submit" value="Add" id="add-button">
+      </form>
+    </section>
+    <section id="contact" class="hide-section">
+      <div id="contact-div">
+        <h2 class="contant-title">Contact information</h2>
+
+        <p>
+          Do have any questions or yuo just want to say "Hello"?You can reach out to us!
+        </p>
+
+        <ul class="contact-list">
+          <li><i class="fa-solid fa-at fa-xl"></i></li>
+          <li>Our email: mail@mail.com</li>
+          <li><i class="fa-solid fa-phone-volume fa-xl"></i></li>
+          <li>Our phone number: 0043586534422</li>
+          <li><i class="fa-solid fa-location-dot fa-xl"></i></li>
+          <li>Our address: Streetname 22, 84503 City, Country.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="page-footer">
+    <div class="copyright"><i class="fa-solid fa-copyright fa-xl"></i> 2017 Awesome Books USA, Inc. All right reserved.
+    </div>
+  </footer>
 
 
-  <script src="assets/js/index.js"></script>
+  <script type="module" src="assets/js/index.js"></script>
 </body>
 
 </html>
