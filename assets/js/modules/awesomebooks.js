@@ -8,13 +8,13 @@ class AwesomeBooks {
     this.id = 0;
   }
 
-  renderBooks() {
+  renderBooks = () => {
     this.awesomeBooks2.forEach((book) => {
       this.addBook(book, '.books-content');
     });
   }
 
-  addBook(Book, booksDiv) {
+  addBook = (Book, booksDiv) => {
     this.id += 1;
     Book.id = this.id;
 
@@ -39,11 +39,11 @@ class AwesomeBooks {
     this.addToLocalStorage();
   }
 
-  addToLocalStorage() {
+  addToLocalStorage = () => {
     localStorage.setItem('awesomeBooks', JSON.stringify(this.awesomeBooks));
   }
 
-  removeBook(id) {
+  removeBook = (id) => {
     this.awesomeBooks = this.awesomeBooks.filter(
       (book) => book.id.toString() !== id.toString(),
     );
