@@ -18,7 +18,6 @@ class AwesomeBooks {
     this.id += 1;
     Book.id = this.id;
 
-
     this.awesomeBooks.push(Book);
 
     const singleBook = document.createElement('div');

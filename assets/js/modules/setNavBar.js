@@ -33,6 +33,6 @@ const setNavBar = () => {
     navClickList.classList.remove('active');
     navClickAdd.classList.remove('active');
   });
-}
+};
 
 export default setNavBar;

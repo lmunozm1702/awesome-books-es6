@@ -19,4 +19,3 @@ addButton.addEventListener('click', () => {
   document.querySelector('#title').value = '';
   document.querySelector('#author').value = '';
 });
-
